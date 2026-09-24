@@ -1,0 +1,35 @@
+{
+  "name": "tms-data-driven-automation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Data-driven Playwright automation engine compiled from TMS test cases.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "tsx --test src/**/*.test.ts",
+    "test:unit": "tsx --test src/**/*.test.ts",
+    "test:e2e": "playwright test",
+    "test:task": "tsx scripts/run-task.ts",
+    "test:headed": "tsx scripts/run-task.ts --headed",
+    "test:tms": "tsx scripts/check-tms.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.5.2",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.1"
+  }
+}
